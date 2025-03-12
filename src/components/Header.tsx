@@ -7,6 +7,7 @@ import { NavBar } from "@/components/ui/tubelight-navbar";
 
 export default function Header() {
   const location = useLocation();
+  const pathname = location.pathname;
 
   const navItems = [
     { name: 'Beranda', url: '/', icon: Home },

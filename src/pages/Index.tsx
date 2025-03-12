@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import { ArrowRight } from "lucide-react";
 
 export default function Index() {
   return (
@@ -27,7 +28,10 @@ export default function Index() {
                 membuat konversi unit menjadi sederhana dan akurat.
               </p>
               <RainbowButton className="mt-4">
-                <Link to="/converter" className="flex items-center">Coba Converta Sekarang</Link>
+                <Link to="/converter" className="flex items-center w-full h-full">
+                  Coba Converta Sekarang
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </RainbowButton>
             </div>
           </div>

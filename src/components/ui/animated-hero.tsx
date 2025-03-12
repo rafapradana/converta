@@ -62,7 +62,7 @@ export function AnimatedHero({ title, description }: { title: string, descriptio
         ]}
         title={title}
         description={description}
-        className="z-0"
+        className="z-0 pointer-events-none"
       />
     </div>
   );

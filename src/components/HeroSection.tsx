@@ -1,4 +1,6 @@
 
+import { useScroll, useTransform } from "framer-motion";
+import React from "react";
 import { AnimatedHero } from "@/components/ui/animated-hero";
 
 export default function HeroSection() {

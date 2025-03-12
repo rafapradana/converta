@@ -28,7 +28,9 @@ export function RainbowButton({
       )}
       {...props}
     >
-      {children}
+      <div className="relative z-10 w-full h-full flex items-center justify-center">
+        {children}
+      </div>
     </button>
   );
 }
