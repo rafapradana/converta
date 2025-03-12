@@ -28,9 +28,9 @@ export default function Header() {
   }, [location.pathname]);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Converter", path: "/converter" },
-    { name: "About", path: "/about" },
+    { name: "Beranda", path: "/" },
+    { name: "Konverter", path: "/converter" },
+    { name: "Tentang", path: "/about" },
   ];
 
   const isActive = (path: string) => {

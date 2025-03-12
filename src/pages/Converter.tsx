@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConversionForm from "@/components/ConversionForm";
@@ -14,13 +13,13 @@ export default function Converter() {
         <section className="pt-32 pb-20 px-4">
           <div className="page-container">
             <div className="flex flex-col text-center space-y-4 max-w-2xl mx-auto mb-12">
-              <Badge className="w-fit mx-auto" variant="outline">Converter</Badge>
+              <Badge className="w-fit mx-auto" variant="outline">Konverter</Badge>
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-                Convert units with precision
+                Konversi unit dengan presisi
               </h1>
               <p className="text-muted-foreground">
-                Select a category, choose your units, and get instant conversion results.
-                Add multiple conversions, export to CSV, or perform batch conversions.
+                Pilih kategori, pilih unit Anda, dan dapatkan hasil konversi instan.
+                Tambahkan beberapa konversi, ekspor ke CSV, atau lakukan konversi batch.
               </p>
             </div>
             

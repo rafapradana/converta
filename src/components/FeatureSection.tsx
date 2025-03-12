@@ -18,7 +18,7 @@ interface FeatureCardProps {
 
 function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
-    <div className="bg-card rounded-xl p-6 border shadow-subtle card-hover h-full">
+    <div className="bg-card rounded-xl p-6 border shadow-subtle card-hover h-full transform transition-all duration-300 hover:scale-105 hover:shadow-md">
       <div className="flex flex-col space-y-4">
         <div className="bg-primary/10 w-10 h-10 rounded-lg flex items-center justify-center text-primary">
           {icon}
@@ -34,49 +34,49 @@ export default function FeatureSection() {
   const features = [
     {
       icon: <Zap className="h-5 w-5" />,
-      title: "Real-time Conversion",
+      title: "Konversi Real-time",
       description:
-        "See conversion results instantly as you type, no need to hit submit.",
+        "Lihat hasil konversi secara instan saat Anda mengetik, tanpa perlu menekan tombol submit.",
     },
     {
       icon: <RefreshCw className="h-5 w-5" />,
-      title: "Reverse Conversion",
+      title: "Konversi Balik",
       description:
-        "Easily flip between source and target units with a single click.",
+        "Dengan mudah beralih antara unit sumber dan target dengan satu klik.",
     },
     {
       icon: <Copy className="h-5 w-5" />,
-      title: "Copy to Clipboard",
+      title: "Salin ke Clipboard",
       description:
-        "Copy conversion results to your clipboard with a single click.",
+        "Salin hasil konversi ke clipboard Anda dengan satu klik.",
     },
     {
       icon: <Download className="h-5 w-5" />,
-      title: "Export Results",
-      description: "Save your conversion results in CSV or PDF formats.",
+      title: "Ekspor Hasil",
+      description: "Simpan hasil konversi Anda dalam format CSV.",
     },
     {
       icon: <PlusCircle className="h-5 w-5" />,
-      title: "Multiple Conversions",
+      title: "Konversi Berganda",
       description:
-        "Convert to multiple units simultaneously for efficient workflows.",
+        "Konversi ke beberapa unit secara bersamaan untuk alur kerja yang efisien.",
     },
     {
       icon: <Search className="h-5 w-5" />,
-      title: "Unit Search",
-      description: "Quickly find the exact unit you need with our search functionality.",
+      title: "Pencarian Unit",
+      description: "Temukan unit yang Anda butuhkan dengan cepat menggunakan fungsi pencarian.",
     },
     {
       icon: <Moon className="h-5 w-5" />,
-      title: "Dark Mode",
+      title: "Mode Gelap",
       description:
-        "Easy on the eyes with a beautiful dark mode for comfortable usage.",
+        "Nyaman di mata dengan mode gelap yang indah untuk penggunaan yang nyaman.",
     },
     {
       icon: <Smartphone className="h-5 w-5" />,
-      title: "Offline Access",
+      title: "Akses Offline",
       description:
-        "Works offline as a Progressive Web App, install on any device.",
+        "Bekerja offline sebagai Progressive Web App, dapat diinstal di perangkat apa pun.",
     },
   ];
 
@@ -85,10 +85,10 @@ export default function FeatureSection() {
       <div className="page-container">
         <div className="flex flex-col space-y-4 text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Packed with Powerful Features
+            Dilengkapi dengan Fitur Kuat
           </h2>
           <p className="text-muted-foreground">
-            Converta is designed with simplicity and functionality in mind, providing all the tools you need for seamless unit conversion.
+            Converta dirancang dengan kesederhanaan dan fungsionalitas, menyediakan semua alat yang Anda butuhkan untuk konversi unit yang mulus.
           </p>
         </div>
 

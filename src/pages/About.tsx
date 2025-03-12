@@ -8,32 +8,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import { User, Github, Instagram, Twitter } from "lucide-react";
 
 export default function About() {
   const faqs = [
     {
-      question: "How accurate are the conversions?",
-      answer: "Converta provides high-precision conversions based on standard conversion factors. For most everyday use, the results are more than accurate enough. The application rounds numbers appropriately based on their magnitude to avoid showing unnecessary decimal places."
+      question: "Seberapa akurat konversi yang disediakan?",
+      answer: "Converta menyediakan konversi presisi tinggi berdasarkan faktor konversi standar. Untuk kebanyakan penggunaan sehari-hari, hasilnya lebih dari cukup akurat. Aplikasi membulatkan angka secara tepat berdasarkan besarnya untuk menghindari menampilkan tempat desimal yang tidak perlu."
     },
     {
-      question: "Can I use Converta offline?",
-      answer: "Yes! Converta is built as a Progressive Web App (PWA), which means you can install it on your device and use it even without an internet connection. The app will work seamlessly offline with all features available."
+      question: "Bisakah saya menggunakan Converta secara offline?",
+      answer: "Ya! Converta dibangun sebagai Progressive Web App (PWA), yang berarti Anda dapat menginstalnya di perangkat Anda dan menggunakannya bahkan tanpa koneksi internet. Aplikasi akan bekerja mulus secara offline dengan semua fitur tersedia."
     },
     {
-      question: "How do I create custom units?",
-      answer: "To create a custom unit, go to the Converter page, select a category, and use the 'Add Custom Unit' option. You'll need to provide a name, symbol, and conversion factor relative to the base unit of the category."
+      question: "Bagaimana cara membuat unit kustom?",
+      answer: "Untuk membuat unit kustom, buka halaman Konverter, pilih kategori, dan gunakan opsi 'Tambah Unit Kustom'. Anda perlu memberikan nama, simbol, dan faktor konversi relatif terhadap unit dasar kategori tersebut."
     },
     {
-      question: "Can I export my conversion results?",
-      answer: "Absolutely! Converta allows you to export your conversion results in CSV format, which can be opened in spreadsheet applications like Excel or Google Sheets. Just click the 'Export CSV' button after performing a conversion."
+      question: "Bisakah saya mengekspor hasil konversi saya?",
+      answer: "Tentu saja! Converta memungkinkan Anda mengekspor hasil konversi dalam format CSV, yang dapat dibuka di aplikasi spreadsheet seperti Excel atau Google Sheets. Cukup klik tombol 'Ekspor CSV' setelah melakukan konversi."
     },
     {
-      question: "Is Converta free to use?",
-      answer: "Yes, Converta is completely free to use with all features available. There are no hidden costs, subscriptions, or in-app purchases."
+      question: "Apakah Converta gratis untuk digunakan?",
+      answer: "Ya, Converta sepenuhnya gratis untuk digunakan dengan semua fitur tersedia. Tidak ada biaya tersembunyi, langganan, atau pembelian dalam aplikasi."
     },
     {
-      question: "How do I report bugs or suggest features?",
-      answer: "We welcome your feedback! You can report bugs or suggest features by contacting us through the feedback link in the footer of the website."
+      question: "Bagaimana cara melaporkan bug atau menyarankan fitur?",
+      answer: "Kami menyambut umpan balik Anda! Anda dapat melaporkan bug atau menyarankan fitur dengan menghubungi kami melalui link umpan balik di footer situs web."
     }
   ];
 
@@ -45,62 +46,62 @@ export default function About() {
         <section className="pt-32 pb-20 px-4">
           <div className="page-container">
             <div className="flex flex-col text-center space-y-4 max-w-2xl mx-auto mb-12">
-              <Badge className="w-fit mx-auto" variant="outline">About</Badge>
+              <Badge className="w-fit mx-auto" variant="outline">Tentang</Badge>
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-                About Converta
+                Tentang Converta
               </h1>
               <p className="text-muted-foreground">
-                Learn more about Converta, how it works, and the team behind it.
+                Pelajari lebih lanjut tentang Converta, cara kerjanya, dan tim di baliknya.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Our Mission</h2>
+                <h2 className="text-2xl font-bold">Misi Kami</h2>
                 <p className="text-muted-foreground">
-                  Converta was created with a simple mission: to make unit conversion 
-                  accessible, accurate, and intuitive for everyone. Whether you're a 
-                  student working on assignments, a professional doing calculations, 
-                  or just someone who needs to convert units in daily life, Converta 
-                  is designed to be your go-to solution.
+                  Converta dibuat dengan misi sederhana: membuat konversi unit 
+                  dapat diakses, akurat, dan intuitif untuk semua orang. Baik Anda 
+                  seorang pelajar yang mengerjakan tugas, profesional yang melakukan 
+                  perhitungan, atau hanya seseorang yang perlu mengkonversi unit dalam 
+                  kehidupan sehari-hari, Converta dirancang untuk menjadi solusi utama Anda.
                 </p>
                 <p className="text-muted-foreground">
-                  We believe that tools should be simple, beautiful, and efficient. 
-                  That's why we've built Converta to work offline, without requiring 
-                  a backend or complex infrastructure. Just open the app and convert 
-                  units instantly.
+                  Kami percaya bahwa alat harus sederhana, indah, dan efisien. 
+                  Itulah mengapa kami telah membangun Converta untuk bekerja secara 
+                  offline, tanpa memerlukan backend atau infrastruktur yang kompleks. 
+                  Cukup buka aplikasi dan konversi unit secara instan.
                 </p>
               </div>
               
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Key Features</h2>
+                <h2 className="text-2xl font-bold">Fitur Utama</h2>
                 <ul className="space-y-4 text-muted-foreground">
                   <li className="flex items-start">
                     <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">✓</span>
-                    <span>Real-time conversion with instant results</span>
+                    <span>Konversi real-time dengan hasil instan</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">✓</span>
-                    <span>Support for multiple unit categories and conversions</span>
+                    <span>Dukungan untuk berbagai kategori dan konversi unit</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">✓</span>
-                    <span>Batch conversion for multiple values at once</span>
+                    <span>Konversi batch untuk beberapa nilai sekaligus</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">✓</span>
-                    <span>Export results to CSV for further analysis</span>
+                    <span>Ekspor hasil ke CSV untuk analisis lebih lanjut</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">✓</span>
-                    <span>Works offline as a Progressive Web App</span>
+                    <span>Bekerja offline sebagai Progressive Web App</span>
                   </li>
                 </ul>
               </div>
             </div>
             
             <div className="space-y-8 max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold text-center">Frequently Asked Questions</h2>
+              <h2 className="text-2xl font-bold text-center">Pertanyaan yang Sering Diajukan</h2>
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
@@ -113,6 +114,51 @@ export default function About() {
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+
+            <div className="mt-20 bg-card rounded-xl p-8 border shadow-elevated">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="bg-primary/10 rounded-full p-8 text-primary">
+                  <User className="h-16 w-16" />
+                </div>
+                
+                <div className="flex-1 space-y-4 text-center md:text-left">
+                  <h2 className="text-2xl font-bold">Tentang Developer</h2>
+                  <p className="text-muted-foreground">
+                    Converta dikembangkan oleh Muhammad Rafa Shaquille Pradana, seorang pengembang yang bersemangat tentang membuat alat yang berguna dan mudah digunakan.
+                  </p>
+                  
+                  <div className="flex justify-center md:justify-start space-x-4">
+                    <a
+                      href="https://github.com/rafapradana"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-card p-2 rounded-full hover:bg-primary/10 transition-colors"
+                      aria-label="GitHub"
+                    >
+                      <Github className="h-6 w-6" />
+                    </a>
+                    <a
+                      href="https://x.com/rafapradanaa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-card p-2 rounded-full hover:bg-primary/10 transition-colors"
+                      aria-label="Twitter"
+                    >
+                      <Twitter className="h-6 w-6" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/rafashaqq"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-card p-2 rounded-full hover:bg-primary/10 transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <Instagram className="h-6 w-6" />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

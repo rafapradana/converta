@@ -19,15 +19,15 @@ export default function Index() {
           <div className="page-container">
             <div className="bg-muted/30 rounded-3xl p-8 md:p-16 flex flex-col items-center text-center space-y-8 neo-blur">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                Ready to start converting?
+                Siap untuk mulai mengkonversi?
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Converta provides all the tools you need for precise unit conversion.
-                Whether for study, work, or daily life, our intuitive interface makes
-                unit conversion simple and accurate.
+                Converta menyediakan semua alat yang Anda butuhkan untuk konversi unit yang tepat.
+                Apakah untuk belajar, bekerja, atau kehidupan sehari-hari, antarmuka kami yang intuitif
+                membuat konversi unit menjadi sederhana dan akurat.
               </p>
               <Button asChild size="lg" className="rounded-full">
-                <Link to="/converter">Try Converta Now</Link>
+                <Link to="/converter">Coba Converta Sekarang</Link>
               </Button>
             </div>
           </div>
