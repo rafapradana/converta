@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
-import { Button } from "@/components/ui/button";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export default function Index() {
   return (
@@ -26,9 +26,9 @@ export default function Index() {
                 Apakah untuk belajar, bekerja, atau kehidupan sehari-hari, antarmuka kami yang intuitif
                 membuat konversi unit menjadi sederhana dan akurat.
               </p>
-              <Button asChild size="lg" className="rounded-full">
-                <Link to="/converter">Coba Converta Sekarang</Link>
-              </Button>
+              <RainbowButton className="mt-4">
+                <Link to="/converter" className="flex items-center">Coba Converta Sekarang</Link>
+              </RainbowButton>
             </div>
           </div>
         </section>
