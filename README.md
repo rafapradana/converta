@@ -1,69 +1,127 @@
-# Welcome to your Lovable project
+# Converta - Aplikasi Konversi Unit Modern
 
-## Project info
+![Converta Logo](public/logo.png)
 
-**URL**: https://lovable.dev/projects/9ca63b6f-041d-479f-8f11-bb718576c7d5
+Converta adalah aplikasi konversi unit yang kuat dan intuitif yang bekerja secara offline. Konversi antar berbagai jenis unit dengan mudah dan dapatkan hasil real-time.
 
-## How can I edit this code?
+## 🌟 Fitur Utama
 
-There are several ways of editing your application.
+- **Konversi Real-time**: Lihat hasil konversi secara instan saat Anda mengetik
+- **Berbagai Kategori Unit**: Panjang, berat, volume, waktu, suhu, dan banyak lagi
+- **Antarmuka Intuitif**: Desain modern dengan UX yang mudah digunakan
+- **Konversi Balik**: Beralih antar unit sumber dan target dengan mudah
+- **Salin ke Clipboard**: Salin hasil konversi dengan satu klik
+- **Ekspor Hasil**: Simpan hasil konversi dalam format CSV
+- **Mode Gelap**: Nyaman di mata saat bekerja di malam hari
+- **Responsif**: Bekerja dengan baik di perangkat desktop, tablet, dan mobile
+- **Offline Support**: Bekerja sebagai Progressive Web App bahkan tanpa koneksi internet
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9ca63b6f-041d-479f-8f11-bb718576c7d5) and start prompting.
+## 🛠️ Teknologi yang Digunakan
 
-Changes made via Lovable will be committed automatically to this repo.
+- [React](https://reactjs.org/) - UI Library
+- [TypeScript](https://www.typescriptlang.org/) - Static type-checking
+- [Vite](https://vitejs.dev/) - Build tool dan development server
+- [React Router](https://reactrouter.com/) - Routing
+- [Framer Motion](https://www.framer.com/motion/) - Animasi
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [shadcn/ui](https://ui.shadcn.com/) - Komponen UI yang dapat digunakan kembali
+- [Lucide React](https://lucide.dev/) - Library Icon
 
-**Use your preferred IDE**
+## ⚙️ Instalasi dan Pengaturan
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prasyarat
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (versi 16 atau lebih baru)
+- npm atau yarn
 
-Follow these steps:
+### Langkah Instalasi
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone repositori
+```bash
+git clone https://github.com/username/converta.git
+cd converta
 ```
 
-**Edit a file directly in GitHub**
+2. Instal dependensi
+```bash
+npm install
+# atau
+yarn install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Jalankan server pengembangan
+```bash
+npm run dev
+# atau
+yarn dev
+```
 
-**Use GitHub Codespaces**
+4. Buka browser dan akses `http://localhost:8080`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📁 Struktur Proyek
 
-## What technologies are used for this project?
+```
+converta/
+├── public/              # Aset statis (gambar, favicon, dll)
+├── src/                 # Kode sumber
+│   ├── components/      # Komponen React yang dapat digunakan kembali
+│   │   ├── ui/          # Komponen UI dasar (shadcn/ui)
+│   ├── context/         # Context Provider React
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utilitas dan fungsi pembantu
+│   ├── pages/           # Komponen halaman utama
+│   ├── App.tsx          # Komponen root aplikasi
+│   ├── index.css        # Stylesheet global
+│   └── main.tsx         # Entry point aplikasi
+├── .gitignore           # File dan direktori yang diabaikan Git
+├── index.html           # Template HTML
+├── package.json         # Dependensi dan skrip
+├── tailwind.config.js   # Konfigurasi Tailwind CSS
+├── tsconfig.json        # Konfigurasi TypeScript
+└── vite.config.ts       # Konfigurasi Vite
+```
 
-This project is built with .
+## 🌐 Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Untuk men-deploy aplikasi:
 
-## How can I deploy this project?
+1. Buat build produksi
+```bash
+npm run build
+# atau
+yarn build
+```
 
-Simply open [Lovable](https://lovable.dev/projects/9ca63b6f-041d-479f-8f11-bb718576c7d5) and click on Share -> Publish.
+2. Output build akan disimpan di direktori `dist/` yang siap untuk di-deploy ke platform hosting apa pun.
 
-## I want to use a custom domain - is that possible?
+### Platform Hosting yang Direkomendasikan
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+- [Netlify](https://www.netlify.com/)
+- [Vercel](https://vercel.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Firebase Hosting](https://firebase.google.com/docs/hosting)
+
+## 🤝 Kontribusi
+
+Kontribusi sangat diterima! Jika Anda ingin berkontribusi:
+
+1. Fork repositori
+2. Buat branch fitur (`git checkout -b feature/amazing-feature`)
+3. Commit perubahan Anda (`git commit -m 'Add some amazing feature'`)
+4. Push ke branch (`git push origin feature/amazing-feature`)
+5. Buka Pull Request
+
+## 📝 Lisensi
+
+Proyek ini dilisensikan di bawah [Lisensi MIT](LICENSE).
+
+## 📧 Kontak
+
+Muhammad Rafa Shaquille Pradana - [@rafapradanaa](https://x.com/rafapradanaa) - rafa.s.pradana@gmail.com
+
+Link Proyek: [https://github.com/username/converta](https://github.com/username/converta)
+
+---
+
+Dibuat dengan ❤️ oleh Muhammad Rafa Shaquille Pradana
