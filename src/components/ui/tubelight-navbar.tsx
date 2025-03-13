@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useEffect, useState } from "react"
@@ -48,11 +47,11 @@ export function NavBar({ items, className }: NavBarProps) {
   return (
     <div
       className={cn(
-        "fixed bottom-0 sm:bottom-auto sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
+        "fixed bottom-0 sm:bottom-auto sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6 transition-all duration-300",
         className,
       )}
     >
-      <div className="flex items-center gap-3 bg-background/50 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
+      <div className="flex items-center gap-3 bg-background/50 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg transition-all duration-300">
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.name
@@ -63,13 +62,13 @@ export function NavBar({ items, className }: NavBarProps) {
               to={item.url}
               onClick={() => setActiveTab(item.name)}
               className={cn(
-                "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
+                "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-all duration-300",
                 "text-foreground/80 hover:text-primary",
                 isActive && "bg-muted text-primary",
               )}
             >
-              <span className="hidden md:inline">{item.name}</span>
-              <span className="md:hidden">
+              <span className="hidden md:inline transition-opacity duration-300">{item.name}</span>
+              <span className="md:hidden transition-opacity duration-300">
                 <Icon size={18} strokeWidth={2.5} />
               </span>
               {isActive && (
@@ -81,12 +80,13 @@ export function NavBar({ items, className }: NavBarProps) {
                     type: "spring",
                     stiffness: 300,
                     damping: 30,
+                    duration: 0.4
                   }}
                 >
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-t-full">
-                    <div className="absolute w-12 h-6 bg-primary/20 rounded-full blur-md -top-2 -left-2" />
-                    <div className="absolute w-8 h-6 bg-primary/20 rounded-full blur-md -top-1" />
-                    <div className="absolute w-4 h-4 bg-primary/20 rounded-full blur-sm top-0 left-2" />
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-t-full transition-all duration-300">
+                    <div className="absolute w-12 h-6 bg-primary/20 rounded-full blur-md -top-2 -left-2 transition-all duration-300" />
+                    <div className="absolute w-8 h-6 bg-primary/20 rounded-full blur-md -top-1 transition-all duration-300" />
+                    <div className="absolute w-4 h-4 bg-primary/20 rounded-full blur-sm top-0 left-2 transition-all duration-300" />
                   </div>
                 </motion.div>
               )}

@@ -1,10 +1,31 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
+
+// Animasi untuk transisi halaman
+const pageVariants = {
+  initial: {
+    opacity: 0,
+  },
+  in: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+  out: {
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+};
 
 const NotFound = () => {
   const location = useLocation();
@@ -17,7 +38,13 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <motion.div 
+      className="flex flex-col min-h-screen"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+    >
       <Header />
       
       <main className="flex-1 flex items-center justify-center">
@@ -37,7 +64,7 @@ const NotFound = () => {
       </main>
       
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

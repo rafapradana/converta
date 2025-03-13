@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,10 +5,38 @@ import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+
+// Animasi untuk transisi halaman
+const pageVariants = {
+  initial: {
+    opacity: 0,
+  },
+  in: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+  out: {
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+};
 
 export default function Index() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <motion.div 
+      className="flex flex-col min-h-screen"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+    >
       <Header />
       
       <main className="flex-1">
@@ -39,6 +66,6 @@ export default function Index() {
       </main>
       
       <Footer />
-    </div>
+    </motion.div>
   );
 }

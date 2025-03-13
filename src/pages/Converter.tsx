@@ -1,12 +1,39 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConversionForm from "@/components/ConversionForm";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
+
+// Animasi untuk transisi halaman
+const pageVariants = {
+  initial: {
+    opacity: 0,
+  },
+  in: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+  out: {
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+};
 
 export default function Converter() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <motion.div 
+      className="flex flex-col min-h-screen"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+    >
       <Header />
       
       <main className="flex-1">
@@ -29,6 +56,6 @@ export default function Converter() {
       </main>
       
       <Footer />
-    </div>
+    </motion.div>
   );
 }
