@@ -66,11 +66,14 @@
 
   html {
     @apply scroll-smooth;
+    scroll-behavior: smooth;
+    height: 100%;
   }
 
   body {
     @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    font-family: 'Inter', sans-serif;
   }
 }
 
